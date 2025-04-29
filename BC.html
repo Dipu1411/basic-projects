@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Counter</title>
+</head>
+<style>
+    #counter {
+        font-size: 2em;
+        margin: 20px;
+    }
+
+    button{
+        border: none;
+        width: 100px;
+        padding: 8px 10px;
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <h1>Basic Counter</h1>
+    <div id="counter">
+        <h2>Count : <span id="count-value">0</span></h2>
+    </div>
+
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+
+</body>
+<script>
+    let count = 0;
+
+    let counter = document.getElementById("count-value");
+    let incrementBtn = document.getElementById("increment");
+    let decrementBtn = document.getElementById("decrement");
+
+    incrementBtn.addEventListener('click', () => {
+        count++;
+        counter.textContent = count;
+    })
+
+    decrementBtn.addEventListener('click', () => {
+        count--;
+        counter.textContent = count;
+    })
+</script>
+
+</html>
